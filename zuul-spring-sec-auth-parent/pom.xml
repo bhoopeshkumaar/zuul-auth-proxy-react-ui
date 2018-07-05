@@ -5,7 +5,7 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.5.2.RELEASE</version>
   </parent>
-  <groupId>com.ntrs</groupId>
+  <groupId>com.bhoopesh</groupId>
   <artifactId>zuul-spring-sec-auth-parent</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>

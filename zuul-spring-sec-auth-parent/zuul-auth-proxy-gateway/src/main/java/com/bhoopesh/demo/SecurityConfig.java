@@ -1,4 +1,4 @@
-package com.ntrs.demo;
+package com.bhoopesh.demo;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,8 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.ntrs.demo.security.common.JwtAuthenticationConfig;
-import com.ntrs.demo.security.common.JwtTokenAuthenticationFilter;
+import com.bhoopesh.demo.security.common.JwtAuthenticationConfig;
+import com.bhoopesh.demo.security.common.JwtTokenAuthenticationFilter;
 
 /**
  * Config role-based auth.

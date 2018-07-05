@@ -1,4 +1,4 @@
-package com.ntrs.demo;
+package com.bhoopesh.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

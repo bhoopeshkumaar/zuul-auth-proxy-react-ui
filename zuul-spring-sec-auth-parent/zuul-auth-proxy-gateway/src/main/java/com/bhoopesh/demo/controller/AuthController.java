@@ -1,4 +1,4 @@
-package com.ntrs.demo.controller;
+package com.bhoopesh.demo.controller;
 
 import java.util.Collections;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ntrs.demo.payload.JwtAuthenticationResponse;
-import com.ntrs.demo.payload.LoginRequest;
-import com.ntrs.demo.security.common.JWTAuthTokenProvider;
+import com.bhoopesh.demo.payload.JwtAuthenticationResponse;
+import com.bhoopesh.demo.payload.LoginRequest;
+import com.bhoopesh.demo.security.common.JWTAuthTokenProvider;
 
 @RestController
 //@RequestMapping("/api/auth")

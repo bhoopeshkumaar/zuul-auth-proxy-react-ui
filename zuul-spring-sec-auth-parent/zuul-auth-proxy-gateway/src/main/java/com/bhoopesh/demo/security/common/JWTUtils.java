@@ -1,25 +1,19 @@
-package com.ntrs.demo.security.common;
+package com.bhoopesh.demo.security.common;
 
 import java.time.Instant;
 import java.util.Date;
 import java.util.stream.Collectors;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-@Component
-public class JWTAuthTokenProvider {
+public class JWTUtils {
 
-	@Value("${ntrs.security.jwt.expiration:#{24*60*60}}")
-    private int expiration; // default 24 hours
-
-    @Value("${ntrs.security.jwt.secret}")
-    private String secret;
+	@Autowired private JwtAuthenticationConfig config;
 
 	public String generateToken(Authentication auth) {
 
@@ -29,9 +23,10 @@ public class JWTAuthTokenProvider {
 				.claim("authorities", auth.getAuthorities().stream()
 						.map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
 				.setIssuedAt(Date.from(now))
-				.setExpiration(Date.from(now.plusSeconds(expiration)))
-				.signWith(SignatureAlgorithm.HS256, secret.getBytes())
+				.setExpiration(Date.from(now.plusSeconds(config.getExpiration())))
+				.signWith(SignatureAlgorithm.HS256, config.getSecret().getBytes())
 				.compact();
+
 
 		return token;
 	}

@@ -1,4 +1,4 @@
-package com.ntrs.demo.security.common;
+package com.bhoopesh.demo.security.common;
 
 import lombok.Getter;
 import lombok.ToString;

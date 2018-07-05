@@ -1,4 +1,4 @@
-package com.ntrs.demo.payload;
+package com.bhoopesh.demo.payload;
 
 import org.hibernate.validator.constraints.NotBlank;
 

@@ -1,4 +1,4 @@
-package com.ntrs.demo;
+package com.bhoopesh.demo;
 
 import java.util.List;
 

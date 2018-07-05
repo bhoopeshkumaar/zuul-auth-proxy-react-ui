@@ -1,4 +1,4 @@
-package com.ntrs.demo.security.common;
+package com.bhoopesh.demo.security.common;
 
 import java.io.IOException;
 import java.util.List;
